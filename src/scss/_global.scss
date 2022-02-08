@@ -1,0 +1,123 @@
+// Container
+.container {
+    position: relative;
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding+px;
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 750px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+.container-lines{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 20;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    &__item{
+        display: block;
+        height: 100%;
+        width: 1px;
+        background-color: rgba(#D9DFE6, 0.2);
+    }
+}
+
+.page-template{
+    font-family: $fontMain;
+    position: relative;
+    &-wrapper{
+        overflow-x: hidden;
+    }
+}
+
+.section-heading{
+    font-family: $fontMain;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+
+    color: $white;
+    max-width: 350px;
+    position: relative;
+    &:before{
+        content: "";
+        background-image: url("../img/heading-line.svg");
+        background-size: cover;
+        display: block;
+        position: absolute;
+        top: -28px;
+        transform: translateY(-50%);
+        width: 29px;
+        height: 29px;
+        @media (max-width: $breakpoint480) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    @media (max-width: $breakpoint992) {
+        font-size: 36px;
+        max-width: 280px;
+        line-height: 44px;
+    }
+    @media (max-width: $breakpoint480) {
+        font-size: 30px;
+        max-width: 220px;
+        line-height: 37px;
+    }
+
+    &--dark{
+        color: $darkBlue;
+        max-width: 480px;
+        @media (max-width: $breakpoint992) {
+            font-size: 36px;
+            max-width: 360px;
+            line-height: 44px;
+        }
+        @media (max-width: $breakpoint480) {
+            font-size: 30px;
+            max-width: 320px;
+            line-height: 37px;
+        }
+    }
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74px;
+    width: 390px;
+    background-color: $yellow;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.457143px;
+    text-transform: uppercase;
+
+    color: #233148;
+
+    @media (max-width: $breakpoint768) {
+        font-size: 16px;
+        line-height: 19px;
+        width: 280px;
+        height: 54px;
+    }
+}

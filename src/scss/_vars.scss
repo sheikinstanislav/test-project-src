@@ -1,0 +1,20 @@
+// Container & Breakpoints
+@use "sass:math";
+$containerWidth: 1170;
+$containerPadding: 40;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint1199: 1198.98+px;
+$breakpoint992: 991.98+px;
+$breakpoint768: 767.98+px;
+$breakpoint660: 659.98+px;
+$breakpoint575: 574.98+px;
+$breakpoint480: 479.98+px;
+
+// Fonts
+$fontMain: 'Proxima Nova', sans-serif;
+
+//Colors
+$darkBlue: #233148;
+$blue: #1F65D9;
+$yellow: #FCCF18;
+$white: #fff;
